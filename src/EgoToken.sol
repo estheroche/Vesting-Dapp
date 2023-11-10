@@ -4,7 +4,7 @@ pragma solidity ^0.8.9;
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract MarsToken is ERC20 {
+contract EgoToken is ERC20 {
     address owner;
 
     modifier onlyOwner() {
@@ -12,7 +12,7 @@ contract MarsToken is ERC20 {
         _;
     }
 
-    constructor() ERC20("Mars Vesting Token", "MVT") {
+    constructor() ERC20("Ego Vesting Token", "ego") {
         owner = msg.sender;
         _mint(msg.sender, 100000 * 10 ** 18);
     }
